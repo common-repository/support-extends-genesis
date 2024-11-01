@@ -1,0 +1,51 @@
+<div class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+	<div class="page-header navbar" style="display:table;">
+		<?php 
+		include GSPL_PATH .'resources/inc/topbar.inc';
+		?>
+	</div>
+	<div class="page-container">
+		<div class="page-sidebar-wrapper">
+				<?php
+				include GSPL_PATH .'resources/inc/menu.inc';
+				?>
+		</div>
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a href="?page=gsupporter">
+                            	<?php 
+                            	echo __('Dashboard');
+                            	?>
+                            </a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span>
+                            <?php echo get_admin_page_title(); ?>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="portlet-body form">
+                    <h1>Genesis Supporter <?php echo GSPL_VER; ?></h1>
+                    <p>
+                    	Hi alls, Genesis Framework is a great framework for Wordpress.
+                    	It allows we change, remove many components via action and filter hook system.
+                    	But if you doesn't have experiences with wordpress API, you will feel so hard to use hooks system of Genesis.
+                    </p>
+                    <p>
+                    	This is just a small plugin that supports to you to make simple adjustments on header, footer, CSS...
+                    	I hope it is usefull and you will happy enjoy it. Thank you so much.
+                    </p>
+                    <p>
+                    	If you have any problems with it or have any ideals, please contact me at <a href="mailto:duyngha@gmail.com">duyngha@gmail.com.</a> 
+                    	Either you may to post a issue on <a target="_blank" href="https://github.com/duyngha/genesis-supporter/issues">github</a> or post in <a target="_blank" href="">forum on Wordpress Plugins Repository</a>
+                    </p>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

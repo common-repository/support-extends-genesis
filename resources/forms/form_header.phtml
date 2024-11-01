@@ -1,0 +1,223 @@
+<h3 class="page-title"> 
+<?php echo __('Header Settings'); ?>
+</h3>
+<div class="row">
+	<div class="col-md-12">
+	    <!-- BEGIN PORTLET-->
+	    <div class="portlet light form-fit bordered">
+	        <div class="portlet-title">
+	            <div class="caption">
+	                <i class="icon-pin font-red"></i>
+	                <span class="caption-subject font-red sbold uppercase">
+	                	<?php 
+	                	echo __('Header Settings');
+	                	?>
+	                </span>
+	            </div>
+	        </div>
+	        <div class="portlet-body form">
+	            <!-- BEGIN FORM-->
+	            <div class="form-body">
+					<div class="tabbable-line boxless margin-bottom-20">
+					    <ul class="nav nav-tabs">
+					        <li class="active">
+					            <a data-toggle="tab" href="#tab_1" aria-expanded="false">
+					            	<?php 
+					            	echo __('Favicon');
+					            	?>
+					            </a>
+					        </li>
+					        <li class="">
+					            <a data-toggle="tab" href="#tab_2" aria-expanded="false">
+					            	<?php
+					            	echo __('Background');
+					            	?>
+					            </a>
+					        </li>
+					        <li class="">
+					            <a data-toggle="tab" href="#tab_3" aria-expanded="false">
+					            	<?php
+					            	echo __('Options');
+					            	?>
+					            </a>
+					        </li>
+					        <!--li class="">
+					            <a data-toggle="tab" href="#tab_4" aria-expanded="false">
+					            	<?php
+					            	echo __('Top Header');
+					            	?>
+					            </a>
+					        </li-->
+					    </ul>
+					    <div class="tab-content">
+					        <div id="tab_1" class="tab-pane active">
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Enable Favicon');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<div class="md-checkbox">
+										    <input type="checkbox" class="md-check" id="checkbox1" value="1" name="<?php $this->field_name('req_header_upload'); ?>" <?php checked($this->get_field_value('req_header_upload'), '1' ); ?>>
+										    <label for="checkbox1">
+										        <span class="inc"></span>
+										        <span class="check"></span>
+										        <span class="box"></span>
+										    </label>
+										    <span class="help-block">Select this field to enable your favicon.</span>
+										</div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+				                    	<?php 
+				                    	echo __('Upload Favicon');
+				                    	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input id="favicon" type="hidden" name="<?php $this->field_name('favicon'); ?>" value="<?php echo $this->get_field_value('favicon'); ?>" />
+										<div class="col-md-1">
+										<img width="32" id="favicon_view" src="<?php echo ($this->get_field_value('favicon') == '') ? GSPL_URL . 'assets/images/no-thumb.png' : $this->get_field_value('favicon') ; ?>" alt=""/>
+										</div>
+										<div class="col-md-11">
+										<button id="upload_favicon" class="btn btn-sm green-haze" type="button">
+										<i class="fa fa-upload"></i>
+											<?php 
+											echo __('Upload');
+											?>
+										</button>
+										<button id="remove_favicon" class="btn btn-sm red" type="button">
+										<i class="fa fa-trash"></i>
+										<?php 
+										echo __('Delete');
+										?>
+										</button>
+										</div>
+				                    </div>
+				                </div>
+					        </div>
+					        <div id="tab_2" class="tab-pane">
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Enable header background');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<div class="md-checkbox">
+										    <input type="checkbox" class="md-check" id="checkbox2" value="1" name="<?php $this->field_name('req_header_bg'); ?>" <?php checked($this->get_field_value('req_header_bg'), '1' ); ?>>
+										    <label for="checkbox2">
+										        <span class="inc"></span>
+										        <span class="check"></span>
+										        <span class="box"></span>
+										    </label>
+										    <span class="help-block">Select this field to enable background for header.</span>
+										</div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+				                    	<?php 
+				                    	echo __('Upload Background Image');
+				                    	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input id="headerbg" type="hidden" name="<?php $this->field_name('headerbg'); ?>" value="<?php echo $this->get_field_value('headerbg'); ?>" />
+										<div class="col-md-1">
+										<img width="32" id="headerbg_view" src="<?php echo ($this->get_field_value('headerbg') == '') ? GSPL_URL . 'assets/images/no-thumb.png' : $this->get_field_value('headerbg'); ?>" alt=""/>
+										</div>
+										<div class="col-md-11">
+										<button id="upload_headerbg" class="btn btn-sm green-haze" type="button">
+										<i class="fa fa-upload"></i>
+											<?php 
+											echo __('Upload');
+											?>
+										</button>
+										<button id="remove_headerbg" class="btn btn-sm red" type="button">
+										<i class="fa fa-trash"></i>
+										<?php 
+										echo __('Delete');
+										?>
+										</button>
+										</div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+				                    	<?php 
+				                    	echo __('Background Color');
+				                    	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input type="text" data-color-format="rgba" value="<?php echo $this->get_field_value('headerbg_color'); ?>" class="colorpicker-rgba form-control input-medium" name="<?php $this->field_name('headerbg_color'); ?>">
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+				                    	<?php 
+				                    	echo __('Background repeat');
+				                    	?>
+				                    </label>
+				                    <div class="col-md-9">
+				                    <select name="<?php $this->field_name('bgrepeat'); ?>">
+				                    	<option value="">Select</option>
+				                    	<option value="no-repeat" <?php selected($this->get_field_value('bgrepeat'), 'no-repeat'); ?>>no-repeat</option>
+				                    	<option value="repeat-x" <?php selected($this->get_field_value('bgrepeat'), 'repeat-x'); ?>>repeat-x</option>
+				                    	<option value="repeat-y" <?php selected($this->get_field_value('bgrepeat'), 'repeat-y'); ?>>repeat-y</option>
+				                    </select>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+				                    	<?php 
+				                    	echo __('Background position');
+				                    	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input type="text" value="<?php echo $this->get_field_value('bgposition'); ?>" class="form-control input-medium" name="<?php $this->field_name('bgposition'); ?>">
+										<span class="help-block">Use: top right bottom left or number in px value</span>
+				                    </div>
+				                </div>
+					        </div>
+					        <div id="tab_3" class="tab-pane">
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Enable Settings');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<div class="md-checkbox">
+										    <input type="checkbox" class="md-check" id="checkbox3" value="1" name="<?php $this->field_name('req_header_settings'); ?>" <?php checked($this->get_field_value('req_header_settings'), '1' ); ?>>
+										    <label for="checkbox3">
+										        <span class="inc"></span>
+										        <span class="check"></span>
+										        <span class="box"></span>
+										    </label>
+										    <span class="help-block">Select this field to enable header settings.</span>
+										</div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Height');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+				                    <input type="number" class="form-control input-medium" name="<?php $this->field_name('height'); ?>" value="<?php echo $this->get_field_value('height'); ?>">
+				                    <span class="help-block">Height of header (px).</span>
+				                    </div>
+				                </div>
+					        </div>
+					        <!--div id="tab_4" class="tab-pane"></div-->
+					    </div>
+					</div>
+	            </div>
+	            <!-- END FORM-->
+	        </div>
+	    </div>
+	    <!-- END PORTLET-->
+	</div>
+</div>

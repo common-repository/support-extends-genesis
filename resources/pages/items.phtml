@@ -1,0 +1,64 @@
+<div class="page-header-fixed page-sidebar-closed-hide-logo page-content-white">
+	<div class="page-header navbar" style="display:table;">
+		<?php 
+		include GSPL_PATH .'resources/inc/topbar.inc';
+		?>
+	</div>
+	<div class="page-container">
+		<div class="page-sidebar-wrapper">
+				<?php
+				include GSPL_PATH .'resources/inc/menu.inc';
+				?>
+		</div>
+		<div class="page-content-wrapper">
+			<div class="page-content">
+				<div class="page-bar">
+                    <ul class="page-breadcrumb">
+                        <li>
+                            <a href="?page=gsupporter">
+                            	<?php 
+                            	echo __('Dashboard');
+                            	?>
+                            </a>
+                            <i class="fa fa-circle"></i>
+                        </li>
+                        <li>
+                            <span>
+                            <?php echo $this->getAdminPageTitle(); ?>
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="portlet-body form">
+					<form class="form-horizontal form-bordered" method="post" action="options.php">
+						<?php
+							settings_fields($this->settings_field);
+							do_action(
+								"{$this->pagehook}_settings_page_form",
+								$this->pagehook
+							);
+						?>
+
+						<div class="bottom-buttons">
+							<?php
+							$this->submitButton(
+								$this->page_ops['save_button_text'],
+								'primary',
+								'submit',
+								false
+							);
+							$this->submitButton(
+								$this->page_ops['reset_button_text'],
+								'secondary genesis-js-confirm-reset',
+								$this->get_field_name('reset'),
+								false,
+								array('id' => '')
+							);
+							?>
+						</div>
+					</form>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>

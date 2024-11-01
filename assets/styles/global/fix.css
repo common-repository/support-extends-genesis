@@ -1,0 +1,46 @@
+.toplevel_page_gsupport #wpcontent,
+.admin_page_gsheader #wpcontent,
+.admin_page_gsfooter #wpcontent,
+.admin_page_gscustomcss #wpcontent,
+.admin_page_gsingletemp #wpcontent,
+.admin_page_gstitlebar #wpcontent {
+	padding-left: 0;
+}
+.tabbable-line .tab-content {
+    padding: 0;
+}
+.editor {
+	width: 100%;
+	min-height: 500px;
+	border: 1px solid #ccc;
+}
+.navbar-nav > li {
+	margin-bottom: 0;
+}
+.navbar-brand > img {
+	width: 45%;
+}
+li.contact-item i.icon-question {
+	color: #79869a;
+	font-size: 17px;
+}
+.nav > li > a:hover {
+	background-color: #3F4F62;
+}
+.md-radio {
+	margin-bottom: 10px;
+}
+.md-radio > img {
+	width: 40px;
+}
+.bottom-buttons input {
+    margin-right: 5px;
+}
+.page-sidebar .page-sidebar-menu .nav-link.nav-toggle .arrow {
+	width: auto;
+	top: 10px;
+	right: 10px;
+}
+.page-sidebar .page-sidebar-menu .nav-link.nav-toggle .arrow::after {
+	display: none;
+}

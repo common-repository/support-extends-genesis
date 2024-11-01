@@ -1,0 +1,15 @@
+{
+	"autoload": {
+		"psr-4" : {
+			"GS\\src\\": "src",
+			"GS\\GSViews\\": "src/Views",
+			"GS\\GSViews\\GSItems\\": "src/Views/Items",
+			"GS\\GSRouter\\": "src/Router",
+			"GS\\GSModule\\": "src/Module",
+			"GS\\GSTraits\\": "src/Traits",
+			"GS\\GSController\\": "src/Controller",
+			"GS\\GSModule\\": "src/Module",
+			"GS\\GSModule\\GSModel\\": "src/Module/Model"
+		}
+	}
+}

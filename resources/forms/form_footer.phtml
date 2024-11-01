@@ -1,0 +1,236 @@
+<h3 class="page-title"> 
+<?php echo __('Footer Settings'); ?>
+<small><?php echo __(''); ?></small>
+</h3>
+<div class="row">
+	<div class="col-md-12">
+	    <!-- BEGIN PORTLET-->
+	    <div class="portlet light form-fit bordered">
+	        <div class="portlet-title">
+	            <div class="caption">
+	                <i class="icon-pin font-red"></i>
+	                <span class="caption-subject font-red sbold uppercase">
+	                	<?php 
+	                	echo __('Footer Settings');
+	                	?>
+	                </span>
+	            </div>
+	        </div>
+	        <div class="portlet-body form">
+	            <!-- BEGIN FORM-->
+	            <div class="form-body">
+					<div class="tabbable-line boxless margin-bottom-20">
+					    <ul class="nav nav-tabs">
+					        <li class="active">
+					            <a data-toggle="tab" href="#tab_1" aria-expanded="false">
+					            	<?php 
+					            	echo __('Footer Widget');
+					            	?>
+					            </a>
+					        </li>
+					        <li class="">
+					            <a data-toggle="tab" href="#tab_2" aria-expanded="false">
+					            	<?php
+					            	echo __('Copyright');
+					            	?>
+					            </a>
+					        </li>
+					        <li class="">
+					            <a data-toggle="tab" href="#tab_3" aria-expanded="false">
+					            	<?php
+					            	echo __('Style');
+					            	?>
+					            </a>
+					        </li>
+					    </ul>
+					    <div class="tab-content">
+					        <div id="tab_1" class="tab-pane active">
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Enable Footer Widget');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<div class="md-checkbox">
+										    <input type="checkbox" class="md-check" id="checkbox1" value="1" name="<?php $this->field_name('req_widget'); ?>" <?php checked($this->get_field_value('req_widget'), '1' ); ?>>
+										    <label for="checkbox1">
+										        <span class="inc"></span>
+										        <span class="check"></span>
+										        <span class="box"></span> 
+										    </label>
+										    <span class="help-block">Select this field to enable footer widgets.</span>
+										</div>
+				                    </div>
+				                </div>
+				                <!--div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Number Columns');
+					            	?>
+				                    </label>
+				                    <div class="col-md-2">
+									<input class="touchspin" type="text" value="<?php echo $this->get_field_value('number_widget'); ?>" name="<?php $this->field_name('number_widget'); ?>">
+				                    </div>
+				                </div-->
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Layouts');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+				                    <div class="radio-list">
+                                        <div class="md-radio">
+                                            <input type="radio" id="radio0" class="md-radiobtn" name="<?php $this->field_name('footer_layout'); ?>" value="3-3" <?php checked($this->get_field_value( 'footer_layout' ), '3-3' ); ?>>
+                                            <label for="radio0">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span>
+                                            </label>
+                                            <img src="<?php echo GSPL_URL . 'assets/images/footer-3.jpg'; ?>" alt="layout 3" />
+                                            <?php //echo __('Default layout', ''); ?>
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="radio1" class="md-radiobtn" name="<?php $this->field_name('footer_layout'); ?>" value="1-1" <?php checked($this->get_field_value( 'footer_layout' ), '1-1' ); ?>>
+                                            <label for="radio1">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span>
+                                                <?php //echo __('Layout 1 (1/1)', ''); ?>
+                                            </label>
+                                           	<img src="<?php echo GSPL_URL . 'assets/images/footer-1.jpg'; ?>" alt="layout 3" />
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="radio2" class="md-radiobtn" name="<?php $this->field_name('footer_layout'); ?>" value="2-11" <?php checked($this->get_field_value( 'footer_layout' ), '2-11' ); ?>>
+                                            <label for="radio2">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span>
+                                                <?php //echo __('Layout 2 (2/2)', ''); ?>
+                                            </label>
+                                            <img src="<?php echo GSPL_URL . 'assets/images/footer-2.jpg'; ?>" alt="layout 3" />
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="radio3" class="md-radiobtn" name="<?php $this->field_name('footer_layout'); ?>" value="4-4" <?php checked($this->get_field_value( 'footer_layout' ), '4-4' ); ?>>
+                                            <label for="radio3">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span>
+                                                <?php //echo __('Layout 3 (4/4)', ''); ?>
+                                            </label>
+                                            <img src="<?php echo GSPL_URL . 'assets/images/footer-4.jpg'; ?>" alt="layout 4" />
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="radio4" class="md-radiobtn" name="<?php $this->field_name('footer_layout'); ?>" value="2-12" <?php checked($this->get_field_value( 'footer_layout' ), '2-12' ); ?>>
+                                            <label for="radio4">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span>
+                                                <?php //echo __('Layout 4 (1/3 - 2/3)', ''); ?>
+                                            </label>
+                                            <img src="<?php echo GSPL_URL . 'assets/images/footer-1-2.jpg'; ?>" alt="layout 3" />
+                                        </div>
+                                        <div class="md-radio">
+                                            <input type="radio" id="radio5" class="md-radiobtn" name="<?php $this->field_name('footer_layout'); ?>" value="2-21" <?php checked($this->get_field_value( 'footer_layout' ), '2-21' ); ?>>
+                                            <label for="radio5">
+                                                <span></span>
+                                                <span class="check"></span>
+                                                <span class="box"></span>
+                                                <?php //echo __('Layout 5 (2/3 - 1/3)', ''); ?>
+                                            </label>
+                                            <img src="<?php echo GSPL_URL . 'assets/images/footer-2-1.jpg'; ?>" alt="layout 3" />
+                                        </div>
+				                    </div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Widget background color');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input type="text" data-color-format="rgba" value="<?php echo $this->get_field_value('footer_widget_bgcolor'); ?>" class="colorpicker-rgba form-control input-medium" name="<?php $this->field_name('footer_widget_bgcolor'); ?>">
+				                    </div>
+				                </div>
+					        </div>
+					        <div id="tab_2" class="tab-pane">
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Enable Copyright');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<div class="md-checkbox">
+										    <input type="checkbox" class="md-check" id="checkbox2" value="1" name="<?php $this->field_name('req_copyright'); ?>" <?php checked($this->get_field_value('req_copyright'), '1' ); ?>>
+										    <label for="checkbox2">
+										        <span class="inc"></span>
+										        <span class="check"></span>
+										        <span class="box"></span>
+										    </label>
+										    <span class="help-block">Select this field to enable copyright text.</span>
+										</div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Copyright Text');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+									<textarea class="form-control" name="<?php $this->field_name('copyright'); ?>"><?php echo $this->get_field_value('copyright'); ?></textarea>
+				                    </div>
+				                </div>
+					        </div>
+					        <div id="tab_3" class="tab-pane">
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Enable Footer Style');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<div class="md-checkbox">
+										    <input type="checkbox" class="md-check" id="checkbox3" value="1" name="<?php $this->field_name('req_footerstyle'); ?>" <?php checked($this->get_field_value('req_footerstyle'), '1' ); ?>>
+										    <label for="checkbox3">
+										        <span class="inc"></span>
+										        <span class="check"></span>
+										        <span class="box"></span>
+										    </label>
+										    <span class="help-block">Select this field to enable footer settings.</span>
+										</div>
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Footer background color');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input type="text" data-color-format="rgba" value="<?php echo $this->get_field_value('footer_bgcolor'); ?>" class="colorpicker-rgba form-control input-medium" name="<?php $this->field_name('footer_bgcolor'); ?>">
+				                    </div>
+				                </div>
+				                <div class="form-group">
+				                    <label class="control-label col-md-3">
+					            	<?php
+					            	echo __('Footer font color');
+					            	?>
+				                    </label>
+				                    <div class="col-md-9">
+										<input type="text" data-color-format="rgba" value="<?php echo $this->get_field_value('footer_font_color'); ?>" class="colorpicker-rgba form-control input-medium" name="<?php $this->field_name('footer_font_color'); ?>">
+				                    </div>
+				                </div>
+					        </div>
+					    </div>
+					</div>
+	            </div>
+	            <!-- END FORM-->
+	        </div>
+	    </div>
+	    <!-- END PORTLET-->
+	</div>
+</div>

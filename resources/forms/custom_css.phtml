@@ -1,0 +1,57 @@
+<h3 class="page-title"> 
+<?php echo __('Custom CSS'); ?>
+<small><?php echo __(''); ?></small>
+</h3>
+<div class="row">
+	<div class="col-md-12">
+	    <!-- BEGIN PORTLET-->
+	    <div class="portlet light form-fit bordered">
+	        <div class="portlet-title">
+	            <div class="caption">
+	                <i class="icon-pin font-red"></i>
+	                <span class="caption-subject font-red sbold uppercase">
+	                	<?php 
+	                	echo __('Custom CSS');
+	                	?>
+	                </span>
+	            </div>
+	        </div>
+	        <div class="portlet-body form">
+	            <!-- BEGIN FORM-->
+	            <div class="form-body">
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Enable Your Style');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+							<div class="md-checkbox">
+							    <input type="checkbox" class="md-check" id="checkbox1" value="1" name="<?php $this->field_name('req_customcss'); ?>" <?php checked($this->get_field_value('req_customcss'), '1' ); ?>>
+							    <label for="checkbox1">
+							        <span class="inc"></span>
+							        <span class="check"></span>
+							        <span class="box"></span>
+							    </label>
+							    <span class="help-block">Select this field to enable your style.</span>
+							</div>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Stylesheet');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+						<div for="css" data-mode="css" id="code_area_css" class="editor"><?php echo $this->get_field_value('custom_css'); ?></div>
+						<textarea class="hidden" id="hidden_input_css" name="<?php $this->field_name('custom_css'); ?>"><?php echo $this->get_field_value('custom_css'); ?></textarea>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- END FORM-->
+	        </div>
+	    </div>
+	    <!-- END PORTLET-->
+	</div>
+</div>

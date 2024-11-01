@@ -1,0 +1,62 @@
+<h3 class="page-title"> 
+<?php echo __('Custom post type Templates'); ?>
+<small><?php echo __(''); ?></small>
+</h3>
+<div class="row">
+	<div class="col-md-12">
+	    <!-- BEGIN PORTLET-->
+	    <div class="portlet light form-fit bordered">
+	        <div class="portlet-title">
+	            <div class="caption">
+	                <i class="icon-pin font-red"></i>
+	                <span class="caption-subject font-red sbold uppercase">
+	                	<?php 
+	                	echo __('Custom post type template');
+	                	?>
+	                </span>
+	            </div>
+				<div class="actions">
+					<div class="btn-group">
+					    <a data-toggle="dropdown" href="javascript:;" class="btn btn-sm green dropdown-toggle">
+					    	<?php echo __('Select post type'); ?>
+					        <i class="fa fa-angle-down"></i>
+					    </a>
+					    <?php echo $this->selectPostType(); ?>
+					</div>
+				</div>
+	        </div>
+	        <div class="portlet-body form">
+	            <!-- BEGIN FORM-->
+	            <div class="form-body">
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Enable Template');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+						<?php $this->createRequestCheckbox(); ?>
+						<span class="help-block">Select this field to enable this template.</span>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Code Editor');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+						<div for="<?php echo $this->getType(); ?>" data-mode="php" id="code_area_<?php echo $this->getType(); ?>" class="editor"><?php echo $this->get_field_value($this->getType()); ?></div>
+						<?php echo $this->createHiddenInputs(); ?>
+						<span class="help-block">
+							<u>Note:</u> You must put your php code in pair <code>&lt;?php ?&gt;</code> tags.
+						</span>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- END FORM-->
+	        </div>
+	    </div>
+	    <!-- END PORTLET-->
+	</div>
+</div>

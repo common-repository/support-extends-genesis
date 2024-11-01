@@ -1,0 +1,104 @@
+<h3 class="page-title"> 
+<?php echo __('Title Bar Settings'); ?>
+<small><?php echo __(''); ?></small>
+</h3>
+<div class="row">
+	<div class="col-md-12">
+	    <!-- BEGIN PORTLET-->
+	    <div class="portlet light form-fit bordered">
+	        <div class="portlet-title">
+	            <div class="caption">
+	                <i class="icon-pin font-red"></i>
+	                <span class="caption-subject font-red sbold uppercase">
+	                	<?php 
+	                	echo __('Title bar');
+	                	?>
+	                </span>
+	            </div>
+	        </div>
+	        <div class="portlet-body form">
+	            <!-- BEGIN FORM-->
+	            <div class="form-body">
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Enable Title Bar');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+							<div class="md-checkbox">
+							    <input type="checkbox" class="md-check" id="checkbox1" value="1" name="<?php $this->field_name('req_titlebar'); ?>" <?php checked($this->get_field_value('req_titlebar'), '1' ); ?>>
+							    <label for="checkbox1">
+							        <span class="inc"></span>
+							        <span class="check"></span>
+							        <span class="box"></span>
+							    </label>
+							    <span class="help-block">Select this field to enable title bar settings.</span>
+							</div>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Title Content');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+							<textarea class="form-control" name="<?php $this->field_name('title_content'); ?>"><?php echo $this->get_field_value('title_content'); ?></textarea>
+							<span class="help-block"><u>Note:</u> you can use html tag, shortcode tag in this area.</span>
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Title Height');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+							<input type="number" class="form-control input-medium" value="<?php echo $this->get_field_value('title_height'); ?>" name="<?php $this->field_name('title_height'); ?>" />
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Background Color');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+							<input type="text" data-color-format="rgba" value="<?php echo $this->get_field_value('title_bgcolor'); ?>" class="colorpicker-rgba form-control input-medium" name="<?php $this->field_name('title_bgcolor'); ?>">
+	                    </div>
+	                </div>
+	                <div class="form-group">
+	                    <label class="control-label col-md-3">
+		            	<?php
+		            	echo __('Background Image');
+		            	?>
+	                    </label>
+	                    <div class="col-md-9">
+							<input id="title_bgimg" type="hidden" name="<?php $this->field_name('title_bgimg'); ?>" value="<?php echo $this->get_field_value('title_bgimg'); ?>" />
+							<div class="col-md-1">
+							<img width="32" id="titlebg_view" src="<?php echo ($this->get_field_value('title_bgimg') == '') ? GSPL_URL . 'assets/images/no-thumb.png' : $this->get_field_value('title_bgimg'); ?>" alt=""/>
+							</div>
+							<div class="col-md-11">
+							<button id="upload_titlebg" class="btn btn-sm green-haze" type="button">
+							<i class="fa fa-upload"></i>
+								<?php 
+								echo __('Upload');
+								?>
+							</button>
+							<button id="remove_titlebg" class="btn btn-sm red" type="button">
+							<i class="fa fa-trash"></i>
+							<?php 
+							echo __('Delete');
+							?>
+							</button>
+							</div>
+	                    </div>
+	                </div>
+	            </div>
+	            <!-- END FORM-->
+	        </div>
+	    </div>
+	    <!-- END PORTLET-->
+	</div>
+</div>
